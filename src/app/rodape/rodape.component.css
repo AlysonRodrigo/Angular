@@ -1,0 +1,23 @@
+ul.minhas-redes{
+list-style: none;
+padding: 0%;
+}
+ul.minhas-redes li{
+    display: inline;
+    margin: 0;
+    padding: 5px;
+}
+.fa{
+    font-size:29pt;
+    color:rgb(143, 143, 16);
+    padding: 7px;
+}
+.fa-github:hover{
+    color: rgb(0, 0, 0);
+}
+.fa-linkedin-square:hover{
+    color: rgb(25, 23, 121);
+}
+.fa-instagram:hover{
+    color: rgb(241, 129, 0);
+}
