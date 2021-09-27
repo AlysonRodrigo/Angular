@@ -1,0 +1,9 @@
+#img-bg{
+    background-image: url("/../../assets/image/images\ \(14\).jpeg");
+
+    min-height: 643px;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
