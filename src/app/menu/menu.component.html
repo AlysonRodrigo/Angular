@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-info">
+<nav class="navbar navbar-expand-lg navbar-light bg-info mb-0">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -6,22 +6,24 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto d-flex align-items-center">
         <li class="nav-item active">
-        <img src="https://www.adesivobarato.com.br/image/cache/data/animes/DB-026-800x600.jpg" alt="Esfera do dragao" width="50px" height="50px" class="img-fluid rounded-circle">
+        <img src="{{foto}}" alt="" width="50px" height="50px" class="img-fluid rounded-circle">
         </li>
         <li class="nav-item pl-3">
-        <p class="m-0 font-weight-bolder cor-nome fs-15">Nome do Usuario</p>
+        <p class="m-0 font-weight-bolder cor-nome fs-15">Ola, {{nome}}</p>
         </li>
         <li>
-          <a href="">
+          <a>
             <p class="cor-nome fs-15 m-1"><i class="fa fa-pencil cor-nome fs-15" aria-hidden="true"></i></p> 
           </a>
         </li>
       </ul>
       <ul  class="navbar-nav ml-auto d-flex align-items-center">
         <li class="nav-item pl-3">
-          <a class="m-0 font-weight-bolder cor-nome fs-15">Sair <i class="fa fa-sign-out" aria-hidden="true"></i>
+          <a (click)='sair()' class="m-0 font-weight-bolder cor-nome fs-15">Sair <i class="fa fa-sign-out" aria-hidden="true"></i>
           </a>
           </li>
       </ul>
     </div>
   </nav>
+
+  
