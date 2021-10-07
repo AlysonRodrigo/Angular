@@ -15,7 +15,7 @@ export class InicioComponent implements OnInit {
 
   ngOnInit(){
     if (environment.token == ''){
-      alert('Sua seção inspirou, faça login novamente...')
+      alert('Sua seção espirou, faça login novamente...')
       this.router.navigate(['/enter'])
     }
   }
