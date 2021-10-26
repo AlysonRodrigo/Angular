@@ -26,6 +26,9 @@ idTemas:number
 usuar: UsuarioModel=new UsuarioModel()
 idUsuarios=environment.id
 
+key = 'data'
+reverse = true
+
   constructor(
     private router:Router,
     private postagemService: PostagemService,
