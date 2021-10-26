@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment.prod';
 import { postagemModel } from '../Model/postagemModel';
 import { temaModel } from '../Model/temaModel';
 import { UsuarioModel } from '../Model/UsuarioModel';
+import { AlertaService } from '../service/alerta.service';
 import { AuthService } from '../service/auth.service';
 import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
@@ -29,13 +30,16 @@ idUsuarios=environment.id
     private router:Router,
     private postagemService: PostagemService,
     private temaService:TemaService,
-    private authService:AuthService
+    private authService:AuthService,
+    private alertas: AlertaService
 
   ) { }
 
   ngOnInit(){
+    window.scroll(0,0)
+    
     if (environment.token == ''){
-      alert('Sua seção espirou, faça login novamente...')
+      this.alertas.showAlertDanger('Sua seção espirou, faça login novamente...')
       this.router.navigate(['/enter'])
     }
     this.getAllTema()
@@ -75,7 +79,7 @@ this.postagem.criador=this.usuar
 
  this.postagemService.postPostagem(this.postagem).subscribe((resp: postagemModel)=>{
   this.postagem= resp
-  alert('Postagem realizada com sucesso!!')
+  this.alertas.showAlertSucess('Postagem realizada com sucesso!!')
   this.postagem = new postagemModel()
   this.getAllPostagem()
 })

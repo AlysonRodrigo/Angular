@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { temaModel } from 'src/app/Model/temaModel';
+import { AlertaService } from 'src/app/service/alerta.service';
 import { TemaService } from 'src/app/service/tema.service';
 import { environment } from 'src/environments/environment.prod';
 
@@ -15,13 +16,14 @@ export class TemaEditComponent implements OnInit {
   constructor(
     private temaService: TemaService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alertas: AlertaService
   ) { }
 
 
   ngOnInit() {
     if (environment.token == '') {
-      alert('Sua seção espirou, faça login novamente...')
+      this.alertas.showAlertDanger('Sua seção espirou, faça login novamente...')
       this.router.navigate(['/enter'])
     }
   
@@ -36,7 +38,7 @@ this.temaService.getByIdTema(id).subscribe((resp: temaModel) =>{
   atualizar(){
     this.temaService.putTema(this.tema).subscribe((resp: temaModel) => {
       this.tema = resp
-      alert('Tema Atualizado com Sucesso')
+      this.alertas.showAlertSucess('Tema Atualizado com Sucesso')
       this.router.navigate(['/tema'])
     })
   }

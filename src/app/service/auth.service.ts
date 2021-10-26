@@ -12,24 +12,26 @@ export class AuthService {
   constructor(
     private http: HttpClient
   ) { }
-entrar(userLogin: login): Observable<login>{
-return this.http.post<login>('http://localhost:8080/usuario/logar',userLogin)
-}
-cadastrar(user:UsuarioModel): Observable<UsuarioModel> {
-  return this.http.post<UsuarioModel>('http://localhost:8080/usuario/salvar',user)
-}
-  getByIdUser(id_usuario:number):Observable<UsuarioModel>{
+  entrar(userLogin: login): Observable<login> {
+    return this.http.put<login>('http://localhost:8080/usuario/credenciais', userLogin)
+  }
+  cadastrar(user: UsuarioModel): Observable<UsuarioModel> {
+    return this.http.post<UsuarioModel>('http://localhost:8080/usuario/salvar', user)
+  }
+  getByIdUser(id_usuario: number): Observable<UsuarioModel> {
     return this.http.get<UsuarioModel>(`http://localhost:8080/usuario/${id_usuario}`)
   }
+  atualizarUser(user: UsuarioModel): Observable<UsuarioModel>{
+    return this.http.put<UsuarioModel>('http://localhost:8080/usuario/atualizar', user)
+  }
+  logado() {
+    let ok: boolean = false
 
-logado(){
-  let ok:boolean = false
+    if (environment.token != '') {
+      ok = true
+    }
 
- if( environment.token !=''){
-   ok = true
- }
-
-  return ok
+    return ok
   }
 
 }

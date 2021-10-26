@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { postagemModel } from 'src/app/Model/postagemModel';
 import { temaModel } from 'src/app/Model/temaModel';
+import { AlertaService } from 'src/app/service/alerta.service';
 import { PostagemService } from 'src/app/service/postagem.service';
 import { TemaService } from 'src/app/service/tema.service';
 import { environment } from 'src/environments/environment.prod';
@@ -23,14 +24,15 @@ export class PostagemEditComponent implements OnInit {
     private router:Router,
     private route:ActivatedRoute,
     private postagemService:PostagemService,
-    private temaService:TemaService
+    private temaService:TemaService,
+    private alertas: AlertaService
   ) { }
 
   ngOnInit(){
     window.scroll(0,0)
     
     if (environment.token == ''){
-      alert('Sua seção espirou, faça login novamente...')
+      this.alertas.showAlertDanger('Sua seção espirou, faça login novamente...')
       this.router.navigate(['/enter'])
     }
     let id = this.route.snapshot.params['id']
@@ -59,7 +61,7 @@ export class PostagemEditComponent implements OnInit {
 
         this.postagemService.putPostagem(this.postagem).subscribe((resp:postagemModel)=>{
           this.postagem = resp
-          alert('Postagem atualizada com Sucesso')
+          this.alertas.showAlertInfo('Postagem atualizada com Sucesso')
           this.router.navigate(['/inicio'])
         })
     }
