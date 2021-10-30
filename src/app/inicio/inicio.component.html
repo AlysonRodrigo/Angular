@@ -51,6 +51,14 @@
     <div class="tab-pane fade show active" id="TodasasPostagens" role="tabpanel"
       aria-labelledby="nav-TodasasPostagens-tab">
 
+      <div class="row d-flex justify-content-center mt-4 mb-4">
+        <div class="col-md-4">
+          <div class="form-group">
+            <input type="text" class="form-control" id="titulo" placeholder="Digite um titulo de Postagem" [(ngModel)]="tituloPost" (keyup)= 'findByTituloPostagem()'>
+          </div>
+        </div>
+      </div>
+
       <div class="card-columns">
 
         <div class="card text-center" *ngFor='let item of listaPostagem | orderBy : key :reverse'>
@@ -94,6 +102,14 @@
     </div>
 
     <div class="tab-pane fade" id="PostagensPorTemas" role="tabpanel" aria-labelledby="nav-PostagensPorTemas-tab">
+
+      <div class="row d-flex justify-content-center mt-4 mb-4">
+        <div class="col-md-4">
+          <div class="form-group">
+            <input type="text" class="form-control" id="titulo" placeholder="Digite um tema" [(ngModel)]="nomeTema" (keyup)= 'findByNomeTema()'>
+          </div>
+        </div>
+      </div>
 
       <div class="card-columns" *ngFor="let tema of listaTemas">
 

@@ -1,0 +1,51 @@
+footer {
+    background-color: #253F01;
+}
+
+h4 {
+    font-size: 35px;
+}
+
+ul.social-network {
+    list-style: none;
+    padding: 0%;
+}
+
+ul li {
+    display: inline;
+    margin: 0%;
+}
+
+.fa {
+    font-size: 30pt;
+    color:white;
+    padding-right: 30px;
+}
+
+.fa-facebook-square:hover {
+    color: #ECF3D5;
+    transform: scale(1.2, 1.2);
+}
+
+.fa-instagram:hover {
+    color: #ECF3D5;
+    transform: scale(1.2, 1.2);
+}
+
+.fa-linkedin-square:hover {
+    color: #ECF3D5;
+    transform: scale(1.2, 1.2);
+}
+
+.background-do-copy {
+    background-color: #ECF3D5;
+}
+
+.color-green {
+    color: #253F01;
+}
+
+.color-orange {
+    color: #F2A922;
+}
+

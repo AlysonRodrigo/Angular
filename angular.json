@@ -1,12 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "b47f49fe-abfd-4bab-ba1b-a4da540f8525"
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "blog": {
+    "ActionForLife": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/blog",
+            "outputPath": "dist/ActionForLife",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -44,13 +41,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "50mb",
-                  "maximumError": "50mb"
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "50mb",
-                  "maximumError": "50mb"
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
                 }
               ],
               "fileReplacements": [
@@ -76,10 +73,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "blog:build:production"
+              "browserTarget": "ActionForLife:build:production"
             },
             "development": {
-              "browserTarget": "blog:build:development"
+              "browserTarget": "ActionForLife:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -87,7 +84,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "blog:build"
+            "browserTarget": "ActionForLife:build"
           }
         },
         "test": {
@@ -110,5 +107,8 @@
       }
     }
   },
-  "defaultProject": "blog"
+  "defaultProject": "ActionForLife",
+  "cli": {
+    "analytics": "b77214b3-0f08-4ac2-ae75-c91718868a97"
+  }
 }

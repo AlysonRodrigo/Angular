@@ -1,0 +1,130 @@
+.tm-logo{
+    width: 50px;
+    margin: 20px;
+}
+
+h1 {
+    font-size: 50px;
+    color: #253F01;
+}
+
+.color-green {
+    color: #253F01;
+}
+
+.mar-action {
+    margin-left: 10rem;
+    margin-right: 10rem;
+    font-size: 15pt;
+}
+
+.title-sobre {
+    font-size: 50px;
+    color: #F2A922;
+}
+
+.color-text-sobre{
+    color: #ECF3D5;
+}
+
+.color-text-valores{
+    color: #253F01;
+}
+
+.bg-img{
+    background-image: url(https://i.imgur.com/XK2ISUA.png);
+}
+
+.title-sobre-2 {
+    font-size: 50px;
+    color: #253F01;
+}
+
+.bg-sobre {
+    background-color: #253F01;
+    border-radius: 20px;
+}
+
+.bg-sobre-2{
+    background-color: #F2A922;
+    border-radius: 20px;
+}
+
+.bg-sobre-3{
+    background-color: #ECF3D5;
+    border-radius: 20px;
+}
+
+
+.mt-about {
+    margin-top: 4rem;
+}
+
+.img-about {
+    width: 30rem;
+    float: right;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.img-about-2 {
+    width: 30rem;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.size-img {
+    width: 12rem;
+}
+
+.size-img-2 {
+    width: 11rem;
+    padding-top: 1rem;
+}
+
+.card:hover {
+    border-style: solid;
+    border-color: #F2A922;
+}
+
+.icon-1{
+    width: 9rem;
+}
+
+.icon-1:hover{
+    transform: scale(1.1, 1.1);
+}
+
+
+.bg-container-2{
+    background-color: #253F01;
+    color: #ECF3D5;
+}
+
+.img-produtos {
+    width: 35rem;
+    border-radius: 8px;
+}
+
+.bg-color-sust {
+    background-color: #253F01;
+    color: #ECF3D5;
+    border-radius: 10px;
+}
+
+.img-produtos-2 {
+    width: 35rem;
+    border-radius: 8px;
+}
+
+.bg-color-sust-2 {
+    background-color: #ECF3D5;
+    color: #253F01;
+    border-radius: 10px;
+}
+
+.bg-color-sust-3 {
+    background-color: #F2A922;
+    color: #ECF3D5;
+    border-radius: 10px;
+}

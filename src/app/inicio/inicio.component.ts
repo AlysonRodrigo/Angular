@@ -26,7 +26,9 @@ idTemas:number
 usuar: UsuarioModel=new UsuarioModel()
 idUsuarios=environment.id
 
-key = 'data'
+tituloPost: string
+nomeTema:string
+key = 'date'
 reverse = true
 
   constructor(
@@ -88,4 +90,23 @@ this.postagem.criador=this.usuar
 })
 }
 
+findByTituloPostagem(){
+  if(this.tituloPost==''){
+    this.getAllPostagem()
+  }else{
+    this.postagemService.getByTituloPostagem(this.tituloPost).subscribe((resp: postagemModel[])=>{
+      this.listaPostagem=resp
+    })
+  }
+}
+
+findByNomeTema(){
+  if(this.nomeTema ==''){
+    this.getAllTema()
+  }else{
+    this.temaService.getByNomeTema(this.nomeTema).subscribe((resp: temaModel[])=>{
+      this.listaTemas=resp
+    })
+  }
+}
 }

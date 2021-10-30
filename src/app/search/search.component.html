@@ -1,0 +1,32 @@
+<div class="container mt-3 mb-5">
+
+    <div class="row mb-5">
+        <div class="col-md-12">
+            <h2>Pesquisar por </h2>
+            <h3>{{busca}}</h3>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <!--div envolvendo todos os cards-->
+        <div class="col-sm-4 mb-3">
+
+            <!--cada card com o produto-->
+            <div class="card">
+                <div class="d-flex justify-content-center">
+                    <img class="img-fluid" src="" alt="">
+                </div>
+                <div class="card-body text-center">
+                    <h4>{{product.name}}</h4>
+                    <small>{{product.categoryProduct.type}}</small>
+                    <p>R$ {{product.price}}</p>
+                    <a class="btn" href="">Ver Produto</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

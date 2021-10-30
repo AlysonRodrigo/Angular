@@ -1,0 +1,54 @@
+.bg-img{
+    width: 101%;
+}
+
+.title-parceiros {
+    font-size: 35pt;
+    color: #F2A922 ;
+}
+
+.text-parceiros {
+    font-size: 13pt;
+    color: #253F01;
+}
+
+.img-parceiros{
+    width: 25rem;
+}
+
+.title-gren {
+    font-size: 30pt;
+    color: #F2A922 ;
+}
+
+.myButton {
+    outline: #F2A922;
+    border-radius:10px;
+    border:1px solid #F2A922;
+    display:inline-block;
+    color:#F2A922;
+    font-size: 12pt;
+    padding:6px 14px;
+    text-decoration:none;
+}
+.myButton:hover {
+    background-color:#f2a9223a;
+}
+
+.bg-projects{
+    background-image: url(https://i.imgur.com/8JJ3hty.jpg);
+    padding: 30px;
+}
+
+.card-color {
+    background-color:#253F01;
+    border-radius:10px;
+    border:1px solid #F2A922;
+    color: #ECF3D5;
+}
+
+.card-img-top {
+    border-radius: 11px 11px 0 0;
+    border: 1px 0px 1px 0px;
+}
+

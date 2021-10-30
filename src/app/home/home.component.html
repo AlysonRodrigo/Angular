@@ -1,0 +1,365 @@
+<div class="container-fluid mt-5">
+    <div class="row">
+        <!--Informações sobre produtos e Botão para a página de Produtos e modal de cadastrar produto-->
+        <div class="col-md-6 color-green flex-column align-items-center d-flex">
+            <div class="col-md-8">
+                <h1>Action For Life</h1>
+                <p class="size-action">Nascemos para facilitar a vida de pessoas que gostam de fazer compras de forma
+                    consciente! Apoie essa causa e garanta um futuro melhor para todos.
+                </p>
+                <div>
+                    <button class="btn border-radius text-white bgcolor-orange px-4"
+                        routerLink='/products'>Produtos</button>
+                    <button *ngIf="authService.typeUser()" class="btn border-radius text-white bgcolor-orange px-4 ml-4"
+                        data-toggle="modal" data-target="#newProduct">Cadastrar Produto</button>
+                </div>
+            </div>
+        </div>
+
+        <!--Carrossel com imagens-->
+        <div class="col-md-6 d-flex justify-content-center">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="/../../assets/img/img-home/home3.png" class="d-block size-carousel" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/../../assets/img/img-home/home2.png" class="d-block size-carousel" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/../../assets/img/img-home/home4.png" class="d-block size-carousel" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/../../assets/img/img-home/home1.png" class="d-block size-carousel" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Carrossel com varias imagens por vez-->
+        <div class="col-md-12 text-center mt-5">
+            <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel" data-interval="0">
+                <div class="carousel-inner w-100" role="listbox">
+                    <div class="carousel-item row no-gutters active">
+                        <div class="col-2 float-left"><img
+                                class="img-fluid size-multiple-carousel border-radius"
+                                src="https://i.imgur.com/hFmAI0I.jpg">
+                        </div>
+                        <div class="col-2 float-left"><img
+                                class="img-fluid size-multiple-carousel border-radius"
+                                src="https://i.imgur.com/nEgswFP.jpg">
+                        </div>
+                        <div class="col-2 float-left"><img
+                                class="img-fluid size-multiple-carousel border-radius"
+                                src="https://i.imgur.com/MEvoEin.jpg">
+                        </div>
+                        <div class="col-2 float-left"><img
+                                class="img-fluid size-multiple-carousel border-radius"
+                                src="https://i.imgur.com/5rmPacL.jpg">
+                        </div>
+                        <div class="col-2 float-left"><img
+                                class="img-fluid size-multiple-carousel border-radius"
+                                src="https://i.imgur.com/XFN17F9.jpg">
+                        </div>
+                        <div class="col-2 float-left"><img
+                                class="img-fluid size-multiple-carousel border-radius"
+                                src="https://i.imgur.com/x3WwxXu.jpg">
+                        </div>
+                    </div>
+
+                    <div class="carousel-item row no-gutters">
+                        <div class="col-md-2 float-left"><img
+                                class="img-fluid size-multiple-carousel border-radius"
+                                src="https://i.imgur.com/mupJ1Qg.jpg"></div>
+                        <div class="col-md-2 float-left"><img
+                                class="img-fluid size-multiple-carousel border-radius"
+                                src="https://i.imgur.com/NWEZm5w.jpg"></div>
+                        <div class="col-md-2 float-left"><img
+                                class="img-fluid size-multiple-carousel border-radius"
+                                src="https://i.imgur.com/WtVleGI.jpg"></div>
+                        <div class="col-md-2 float-left"><img
+                                class="img-fluid size-multiple-carousel border-radius"
+                                src="https://i.imgur.com/hFmAI0I.jpg"></div>
+                        <div class="col-md-2 float-left"><img
+                                class="img-fluid size-multiple-carousel border-radius"
+                                src="https://i.imgur.com/nm7JdMX.jpg"></div>
+                        <div class="col-md-2 float-left"><img
+                                class="img-fluid size-multiple-carousel border-radius"
+                                src="https://i.imgur.com/NKAVGfK.jpg"></div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#recipeCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#recipeCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <!--Parte de Compre uma Ideia-->
+        <div class="col-md-12 d-flex flex-column align-items-center text-white mt-5 pt-4 pb-5 bgcolor-orange"
+            id="ideias">
+
+            <h2>Faça Parte!</h2>
+
+            <p class="text-center text-wrap">A mudança climática é um evento transnacional, cujos impactos estão
+                desregulando economias nacionais e afetando pessoas em todos os lugares. Por isso precisamos que essa
+                luta seja em conjunto. Entre em contato conosco e vamos fazer uma parceria!
+            <div class="d-flex justify-content-around">
+                <a class="nav-link" routerLink="/about"><img class="w-100 mr-1" src="https://i.imgur.com/IQI0XAm.png"
+                        alt="Arte Urbana"></a>
+                <a class="nav-link" routerLink="/about"><img class="w-100 mr-1" src="https://i.imgur.com/N2lK4Zx.png"
+                        alt="Arte Urbana"></a>
+                <a class="nav-link" routerLink="/about"><img class="w-100" src="https://i.imgur.com/8oqoYx7.png"
+                        alt="Arte Urbana"></a>
+
+            </div>
+        </div>
+
+        <!--Conheça os Produtos Artesanais e Reciclaveis-->
+        <div class="col-md-12 d-flex flex-wrap justify-content-center mt-4">
+            <div class="col-md-9">
+                <h2 class="color-green">Conheça os produtos artesanais e recicláveis</h2>
+                <p class="col-md-10 pl-0">
+                    Aqui na Action For Life você encontra uma linha de produtos que não agridem o meio ambiente, confira
+                    abaixo alguns de nossos produtos:
+                </p>
+            </div>
+            <div class="row d-flex justify-content-between col-md-9">
+
+                <div class="card col-md-2 border-0">
+                    <img src="https://i.imgur.com/3bK4omU.png" class="card-img-top size-multiple-cards" alt="...">
+                    <div class="card-body px-0">
+                        <h6 class="color-green">Vaso de gatinho</h6>
+                        <p class="card-text color-green font-size08">R$19,99</p>
+                    </div>
+                </div>
+
+                <div class="card col-md-2 border-0">
+                    <img src="https://i.imgur.com/S7U5ghE.png" class="card-img-top size-multiple-cards" alt="...">
+                    <div class="card-body px-0">
+                        <h6 class="color-green">Suporte para ovo</h6>
+                        <p class="card-text color-green font-size08">R$12,99</p>
+                    </div>
+                </div>
+
+                <div class="card col-md-2 border-0">
+                    <img src="https://i.imgur.com/vtWrJqz.png" class="card-img-top size-multiple-cards" alt="...">
+                    <div class="card-body px-0">
+                        <h6 class="color-green">Balão e decoração</h6>
+                        <p class="card-text color-green font-size08">R$5,99</p>
+                    </div>
+                </div>
+
+                <div class="card col-md-2 border-0">
+                    <img src="https://i.imgur.com/cf9jwtY.png" class="card-img-top size-multiple-cards" alt="...">
+                    <div class="card-body px-0">
+                        <h6 class="color-green">Pintura mulher negra</h6>
+                        <p class="card-text color-green font-size08">R$10,99</p>
+                    </div>
+                </div>
+
+                <div class="card col-md-2 border-0">
+                    <img src="https://i.imgur.com/7Rc5ALS.png" class="card-img-top size-multiple-cards" alt="...">
+                    <div class="card-body px-0">
+                        <h6 class="color-green">Chaveiro</h6>
+                        <p class="card-text color-green font-size08">R$10,95</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12 bgcolor-green d-flex justify-content-center py-5 mt-3 mb-4">
+            <img src="https://imgur.com/yG54YC7.png" alt="" class="width35 border-radius mr-5">
+            <img src="https://imgur.com/yG54YC7.png" alt="" class="width35 border-radius ml-5">
+        </div>
+
+        <!-- Videos -->
+        <div class="col-md-12 justify-content-center d-flex flex-wrap mt-2">
+            <div class="col-md-9 mb-2">
+                <h2 class="w-75 color-green">Depoimentos de jovens e mulheres buscam um mundo melhor</h2>
+            </div>
+
+            <div class="row mt-2 col-md-12 height">
+                <div class="col-md-6 mb-5">
+                    <iframe class="w-100 h-100" src="https://www.youtube.com/embed/OCr8jbNt_BU"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="col-md-6 mb-5">
+                    <iframe class="w-100 h-100 " src="https://www.youtube.com/embed/lBz6VEHSvlw"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- mais vendidos -->
+        <div class="col-md-12 d-flex flex-wrap justify-content-center">
+            <div class="col-md-9 mb-2">
+                <h2 class="color-green">Mais Vendidos</h2>
+            </div>
+            <div class="row d-flex justify-content-between col-md-9 mb-4">
+                <div class="card col-md-2 border-0">
+                    <img src="https://i.imgur.com/d4ZkN8k.png" class="card-img-top size-multiple-cards" alt="...">
+                    <div class="card-body px-0">
+                        <h6 class="color-green">Cacto</h6>
+                        <p class="card-text color-green font-size08">R$5,75</p>
+                    </div>
+                </div>
+
+                <div class="card col-md-2 border-0">
+                    <img src="https://i.imgur.com/dqg5UZe.png" class="card-img-top size-multiple-cards" alt="...">
+                    <div class="card-body px-0">
+                        <h6 class="color-green">Orquídea</h6>
+                        <p class="card-text color-green font-size08">R$5,89</p>
+                    </div>
+                </div>
+
+                <div class="card col-md-2 border-0">
+                    <img src="https://i.imgur.com/a9k4Eg9.png" class="card-img-top size-multiple-cards" alt="...">
+                    <div class="card-body px-0">
+                        <h6 class="color-green">Cuféia</h6>
+                        <p class="card-text color-green font-size08">R$8,75</p>
+                    </div>
+                </div>
+
+                <div class="card col-md-2 border-0">
+                    <img src="https://i.imgur.com/VKrTvo0.png" class="card-img-top size-multiple-cards" alt="...">
+                    <div class="card-body px-0">
+                        <h6 class="color-green">Capim</h6>
+                        <p class="card-text color-green font-size08">R$5,99</p>
+                    </div>
+                </div>
+
+                <div class="card col-md-2 border-0">
+                    <img src="https://i.imgur.com/Of2LOhq.png" class="card-img-top size-multiple-cards" alt="...">
+                    <div class="card-body px-0">
+                        <h6 class="color-green">Equinácea</h6>
+                        <p class="card-text color-green font-size08">R$10,92</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Novo Produto -->
+<div class="modal fade" id="newProduct" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Cadastrar Novo Produto</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input [(ngModel)]='product.name' type="title" class="form-control" id="name"
+                            placeholder="Insira o nome do produto.">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="brand">Marca</label>
+                        <input [(ngModel)]='product.brand' type="text" class="form-control" name="brand" id="brand">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Descrição</label>
+                        <textarea [(ngModel)]='product.description' class="form-control" name="description"
+                            id="description" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="price">Preço</label>
+                        <input [(ngModel)]='product.price' type="text" class="form-control" name="price" id="price">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="photo">Link da Foto</label>
+                        <input [(ngModel)]='product.photo' type="text" class="form-control" name="photo" id="photo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Defina a categoria do produto ou <a data-dismiss="modal"
+                                data-toggle="modal" data-target="#newCategory" class="styleLink">crie uma nova
+                                categoria</a>:</label>
+                        <select class="form-control" [(ngModel)]='idCateg' (change)='findByIdCategory()' name="category"
+                            id="category">
+                            <option *ngFor="let item of categoryList" value="{{item.idCategory}}">
+                                {{item.type}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success" (click)='insertProduct()'
+                        data-dismiss="modal">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Category-->
+<div class="modal fade" id="newCategory" data-backdrop="static" data-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Cadastrar nova Categoria</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="type">Nome</label>
+                        <input [(ngModel)]='category.type' type="title" class="form-control" id="type"
+                            placeholder="Insira o nome da categoria.">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Descrição</label>
+                        <textarea [(ngModel)]='category.description' class="form-control" name="description"
+                            id="description" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="relevancy">Relevância da Categoria</label>
+                        <input [(ngModel)]='category.relevancy' type="text" class="form-control" name="relevancy"
+                            id="relevancy">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success" (click)='insertCategory()'
+                        data-dismiss="modal">Criar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,100 @@
+<nav class="navbar navbar-expand-lg">
+  <a routerLink="/home">
+    <img class="logo mr-0" src="https://i.imgur.com/saNzsxi.png" alt="logo">
+  </a>
+  <button class="navbar-toggler botomtop" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="action color-white"><i class="fa fa-bars" aria-hidden="true"></i></span>
+  </button>
+
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse ico-bar" id="navbarSupportedContent">
+      <h4 class="ml-0 align-items-center nav a action color-green col-md-2">Action For Life</h4>
+      <div class="col-md-8">
+
+      <ul class="navbar-nav w-50 d-flex justify-content-between align-items-center">
+          
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about">Sobre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/products">
+            Produtos
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/join-us">Faça Parte</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact">Contato</a>
+        </li>
+      </ul>
+    </div>
+
+      <div class="d-flex justify-content-start align-start">
+
+        <ul class="navbar-nav ml-auto d-flex align-items-start align-text-center">
+          <li>
+            <div class="row mx-3 d-flex text-center align-text-center align-items-center">
+              <img *ngIf="logado()" class="imgUser" src="{{authService.userDados().photo}}" alt="">
+              <h6 *ngIf="logado()" class="ml-2 mt-2"> Olá {{authService.userDados().name}}! </h6>
+            </div>
+          </li>
+          <li class="nav-item ">
+            <a *ngIf="deslogado()" class="nav-link " routerLink="/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a *ngIf="deslogado()" class="nav-link" routerLink="/registration">Criar Conta</a>
+          </li>
+          <li class="nav-item pl-3 pt-1 row">
+            <a *ngIf="logado()" class="m-0 font-weight-bolder fs-15" (click)='exit()'>Sair  
+              <i class="fa fa-sign-out" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </div>
+    <a routerLink='/carrinho'><i class="fa fa-shopping-cart ml-5" aria-hidden="true"></i></a>
+  </div>
+</nav>
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(página atual)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Ação</a>
+          <a class="dropdown-item" href="#">Outra ação</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Algo mais aqui</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Desativado</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+    </form>
+  </div>
+</nav> -->

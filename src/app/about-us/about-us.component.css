@@ -1,0 +1,58 @@
+ul.social-network {
+    align-items: center;
+    list-style: none;
+    padding: 5%;
+}
+
+ul li {
+    display: inline;
+    margin: 15px;
+}
+
+.fa {
+    font-size: 20pt;
+    color:rgb(255, 255, 255);
+    padding-right: 0px;
+}
+
+.fa-linkedin-square:hover {
+    color: #D93D04;
+    transform: scale(1.6, 1.6);
+}
+.fa-github:hover {
+    color: #D93D04;
+    transform: scale(1.6, 1.6);
+}
+
+.bg-card{
+    background-color: #F2A922;
+}
+.margin-start{
+    margin-left: 395px;
+}
+.myButton {
+    background-color:#F2A922;
+    border-radius:10px;
+    border:1px solid #F2A922;
+    display:inline-block;
+    color:#FFFFFF;
+    font-size: 12pt;
+    padding: 6px 14px;
+    text-decoration:none;
+}
+.myButton:hover {
+    background-color:#D93D04;
+}
+
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+
+.color-green {
+    color: #253F01;
+}
+
+.color-orange {
+    color: #F2A922;
+}

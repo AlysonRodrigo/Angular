@@ -1,0 +1,57 @@
+.logo{
+    width: 25px;
+    margin: 20px;
+}
+
+.imgUser{
+    width: 30px;
+    border-radius: 12px;
+}
+
+nav a {
+    color: #253F01 !important ;
+}
+
+nav a:hover {
+    color: #6c9039 !important ;
+}
+
+#divBusca{
+    background-color: #F2A922;
+    border-radius:12px;
+    width: 230px;
+    display: flex;
+    position: relative;
+    color: white;
+}
+
+#cor{
+color:white;
+}
+
+#txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left: 20px;
+    font-style:italic;
+    font-size:15px;
+    border:none;
+    color: white;
+}
+
+input::placeholder {
+    color: white;
+    border: none;
+}
+
+.botomtop{
+    background-color:#253F01 
+}
+
+.color-green {
+    color: #253F01;
+}
+
+.color-white {
+    color: white;
+}

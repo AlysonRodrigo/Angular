@@ -1,54 +1,61 @@
-import{HttpClientModule} from "@angular/common/http"
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from "@angular/forms";
-import { HashLocationStrategy,LocationStrategy} from '@angular/common';
-
+import { HttpClientModule } from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MenuComponent } from './menu/menu.component';
-import { RodapeComponent } from './rodape/rodape.component';
-import { EnterComponent } from './enter/enter.component';
-import { CadastroComponent } from './cadastro/cadastro.component';
-import { InicioComponent } from './inicio/inicio.component';
-import { TemaComponent } from './tema/tema.component';
-import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
-import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
-import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
-import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
-import { UserEditComponent } from './edit/user-edit/user-edit.component';
-import { AlertaComponent } from './alerta/alerta.component';
-import { ModalModule } from 'ngx-bootstrap/modal';
-import { OrderModule } from 'ngx-order-pipe';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormsModule } from '@angular/forms';
+
+import { RegistrationComponent } from './registration/registration.component';
+import { LoginComponent } from './login/login.component';
+
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { ProductsComponent } from './products/products.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { AboutComponent } from './about/about.component';
+
+import { CategoryEditComponent } from './edit/category-edit/category-edit.component';
+import { CategoryDeleteComponent } from './delete/category-delete/category-delete.component';
+import { ProductEditComponent } from './edit/product-edit/product-edit.component';
+import { ProductDeleteComponent } from './delete/product-delete/product-delete.component';
+import { SearchComponent } from './search/search.component';
+import { PaymentComponent } from './payment/payment.component';
+import { KnifeComponent } from './knife/knife.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { ProductByIdComponent } from './product-by-id/product-by-id.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
-    RodapeComponent,
-    EnterComponent,
-    CadastroComponent,
-    InicioComponent,
-    TemaComponent,
-    TemaEditComponent,
-    TemaDeleteComponent,
-    PostagemEditComponent,
-    PostagemDeleteComponent,
-    UserEditComponent,
-    AlertaComponent
+    HeaderComponent,
+    LoginComponent,
+    RegistrationComponent,
+    FooterComponent,
+    HomeComponent,
+    ProductsComponent,
+    CategoryEditComponent,
+    CategoryDeleteComponent,
+    AboutComponent,
+    ProductEditComponent,
+    ProductDeleteComponent,
+    AboutUsComponent,
+    SearchComponent,
+    PaymentComponent,
+    CarrinhoComponent,
+    ProductByIdComponent
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FontAwesomeModule,
     HttpClientModule,
-    FormsModule,
-    ModalModule.forRoot(),
-    OrderModule
+    FormsModule
   ],
-  providers: [{
-    provide: LocationStrategy,
-    useClass:HashLocationStrategy
-  }],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

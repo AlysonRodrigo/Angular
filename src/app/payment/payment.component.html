@@ -1,0 +1,167 @@
+<div class="container-fluid mb-3">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <div class=" mt-1">
+    <h1 class="font-weight-bold fs text-center">Pagamento </h1>
+    <div class="margin-start">
+      <div class="col-md-9">
+        <br>
+
+      </div>
+
+      <form>
+        <div class="col-md-7 pr-4">
+          <div class="form-group mt-2">
+            <label for="exampleFormControlInput1">Endereço de Entrega</label>
+            <input class="form-control" id="exampleFormControlInput1">
+          </div>
+        </div>
+
+        <div class="col-md-7 pr-4">
+          <div class="form-group">
+            <label for="exampleFormControlInput1">Cidade</label>
+            <input class="form-control" id="exampleFormControlInput1">
+          </div>
+        </div>
+
+        <div class="col-md-7 pr-4">
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Estado</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+              <option>AC</option>
+              <option>AL</option>
+              <option>AP</option>
+              <option>AM</option>
+              <option>BA</option>
+              <option>CE</option>
+              <option>DF</option>
+              <option>ES</option>
+              <option>GO</option>
+              <option>MA</option>
+              <option>MT</option>
+              <option>MS</option>
+              <option>MG</option>
+              <option>PA</option>
+              <option>PB</option>
+              <option>PR</option>
+              <option>PE</option>
+              <option>PI</option>
+              <option>RJ</option>
+              <option>RN</option>
+              <option>RS</option>
+              <option>RO</option>
+              <option>RR</option>
+              <option>SC</option>
+              <option>SP</option>
+              <option>SE</option>
+              <option>TO</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-md-7 pr-4">
+          <div class="form-group">
+            <label for="exampleFormControlInput1">CEP</label>
+            <input class="form-control" id="exampleFormControlInput1" placeholder="00000-000">
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+  <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+    <li class="nav-item">
+      <a class="myButton mt-2  " id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+        aria-controls="pills-home" aria-selected="true">
+        <i class="fa fa-barcode" aria-hidden="true"></i> </a>
+    </li>
+    <li class="nav-item">
+      <a class="myButton mt-2 " id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+        aria-controls="pills-profile" aria-selected="false">
+        <i class="fa fa-credit-card-alt" aria-hidden="true"></i> </a>
+
+    </li>
+    <li class="nav-item">
+      <a class="myButton mt-2 " id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab"
+        aria-controls="pills-contact" aria-selected="false"> <span class="material-icons">
+          pix
+        </span> </a>
+    </li>
+  </ul>
+  <div class="tab-content" id="pills-tabContent">
+
+    <div class="tab-pane fade  show active d-flex justify-content-center" id="pills-home" role="tabpanel"
+      aria-labelledby="pills-home-tab">
+      Os boletos gerados devem ser pagos em até 3 dias úteis. Aguarde confirmação por email
+    </div>
+
+    <div class=" tab-pane fade  d-flex justify-content-center  " id="pills-contact" role="tabpanel"
+      aria-labelledby="pills-contact-tab">Chave PIX: 13.642.405/0001-75
+    </div>
+
+    <div class="tab-pane fade d-flex justify-content-center" id="pills-profile" role="tabpanel"
+      aria-labelledby="pills-profile-tab">
+      <div class="container form-group">
+        <label>Forma de Pagamento</label>
+        <select class="form-control">
+          <option value="1">À vista</option>
+          <option value="2">Parcelado em 2X</option>
+        </select>
+        <div class="form-row mb-3">
+          <div class="col-md-8">
+            <label>Nome no Cartão</label>
+            <input id="nomeCartao" type="text" class="form-control">
+          </div>
+          <div class="col-md-4">
+            <label>Número do CPF</label>
+            <input id="cpf" placeholder="XXX.XXX.XXX-XX" type="text" class="form-control" maxlength="14">
+          </div>
+        </div>
+
+        <div class="form-row mb-3">
+          <div class="col-md-6">
+            <label>Número do Cartão</label>
+            <input id="noCartao" placeholder="XXXX XXXX XXXX XXXX" type="text" class="form-control" maxlength="19">
+          </div>
+          <div class="col-md-2">
+            <label>Código de segurança</label>
+            <input id="cvv" placeholder="XXX" type="text" class="form-control" maxlength="3">
+          </div>
+          <div class="col-md-2">
+            <label>Mês de Validade</label>
+            <select class="form-control">
+              <option value="1">01</option>
+              <option value="2">02</option>
+              <option value="3">03</option>
+              <option value="4">04</option>
+              <option value="5">05</option>
+              <option value="6">06</option>
+              <option value="7">07</option>
+              <option value="8">08</option>
+              <option value="9">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label>Ano de Validade</label>
+            <select class="form-control">
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+              <option value="2027">2027</option>
+              <option value="2028">2028</option>
+              <option value="2029">2029</option>
+              <option value="2030">2030</option>
+
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

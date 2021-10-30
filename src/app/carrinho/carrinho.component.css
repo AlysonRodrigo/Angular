@@ -1,0 +1,69 @@
+  h1{
+    text-align: center;
+    color: #1c372c;
+    margin-bottom: 20px;
+  }
+  
+  p{
+    color: white;
+  }
+  .row{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin: 0px;
+  }
+  #container-produto{
+  
+      background-color: #565754;
+      border-radius: 10px;
+      width: 700px;
+  }
+  #produto{
+    text-align: center;
+  }
+  #produto img{
+      width: 100px;
+      margin: 2vh 0 2vh 0;
+  }
+  
+  #precoParcial{
+    font-size: 20pt;
+  
+  }
+  #confirma{
+      display: flex;
+      justify-content: center;
+  }
+  #total{
+      margin-bottom: 10vh;
+      text-align: right;
+      font-size: 28pt;
+  }
+  #comprar{
+      width: 30vh;
+      margin-bottom: 5vh;
+      font-size: 12pt;
+      color: white;
+      background-color: #1c372c;
+  }
+  
+  #continuar{
+      width: 30vh;
+      margin-bottom: 5vh;
+      font-size: 12pt;
+      color: white;
+      background-color: #884f0e;
+  }
+  
+  #quantidade{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 25pt;
+  }
+  
+  #vazio{
+    text-align: center;
+    color: #884f0e;
+  }

@@ -1,0 +1,31 @@
+<div class="container-fluid mt-3 mb-5">
+    <div class="row d-flex flex-wrap justify-content-center">
+        <div class="col-md-10 bg-light row py-5">
+            <div class="col-md-6 flex-column align-items-center d-flex">
+                <div class="col-md-12">
+                    <img class="w-100 border-radius" src="{{product.photo}}" alt="">
+                </div>
+            </div>
+            <div class="col-md-6 align-items-center d-flex flex-column">
+                <div class="col-md-8 border">
+                    <p class="font-weight-light mb-0 color-green">{{product.categoryProduct.type}}</p>
+                    <h3 class="color-green mb-0">{{product.name}}</h3>
+                    <p class="mb-3">{{product.brand}}</p>
+                    <h3 class="font-weight-light mb-4 color-green">R$ {{product.price.toFixed(2).replace('.', ',')}}</h3>
+                    <p class="font-weight-bold mb-2">Estoque disponível</p>
+                    <p class="color-green mb-1">Quantidade: </p>
+                    <div>
+                        <input type="button" id="minus" value="-" (click)="quantityChange(-1)" />
+                        <input [(ngModel)]="quant" id="quant" name="quant" class="text" size="1" value="1"
+                            type="text"/>
+                        <input type="button" id="plus" value="+" (click)="quantityChange(1)">
+                    </div>
+                    <button type="button" class="btn border-radius text-white bgcolor-orange px-3 mt-4" (click)="addShopCart()">Adicionar ao carrinho</button>
+                    <p class="mt-4 h4 color-green">Descrição</p>
+                    <p>{{product.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,31 +1,38 @@
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CadastroComponent } from './cadastro/cadastro.component';
-import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
-import { TemaDeleteComponent } from './delete/tema-delete/tema-delete.component';
-import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
-import { TemaEditComponent } from './edit/tema-edit/tema-edit.component';
-import { UserEditComponent } from './edit/user-edit/user-edit.component';
-import { EnterComponent } from './enter/enter.component';
-import { InicioComponent } from './inicio/inicio.component';
-import { TemaComponent } from './tema/tema.component';
+import {RegistrationComponent } from './registration/registration.component';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { ProductsComponent } from './products/products.component';
+import { CategoryEditComponent } from './edit/category-edit/category-edit.component';
+import { CategoryDeleteComponent } from './delete/category-delete/category-delete.component';
+import { ProductEditComponent } from './edit/product-edit/product-edit.component';
+import { ProductDeleteComponent } from './delete/product-delete/product-delete.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { AboutComponent } from './about/about.component';
+import { SearchComponent } from './search/search.component';
+import { PaymentComponent } from './payment/payment.component';
+import { KnifeComponent } from './knife/knife.component';
+import { CarrinhoComponent } from './carrinho/carrinho.component';
+import { ProductByIdComponent } from './product-by-id/product-by-id.component';
 
 const routes: Routes = [
-
-  { path: '', redirectTo: 'enter', pathMatch: 'full' },
-  { path: "enter", component: EnterComponent },
-  { path: "cadastro", component: CadastroComponent },
-
-  { path: "inicio", component: InicioComponent },
-  { path: "tema", component: TemaComponent },
-
-  {path: "tema-edit/:id", component:TemaEditComponent},
-  {path: 'tema-delete/:id', component:TemaDeleteComponent},
-
-  {path: "postagem-edit/:id", component:PostagemEditComponent},
-  {path: "postagem-delete/:id", component:PostagemDeleteComponent},
-  {path: "user-edit/:id",component:UserEditComponent}
-
+  {path: '', redirectTo:'home', pathMatch: 'full'},
+  {path: "home", component: HomeComponent},
+  {path: "login", component: LoginComponent},
+  {path: "registration", component: RegistrationComponent},
+  {path: "products", component: ProductsComponent},
+  {path: "category-edit/:id", component: CategoryEditComponent},
+  {path: "category-delete/:id", component: CategoryDeleteComponent},
+  {path: "product-edit/:id", component: ProductEditComponent},
+  {path: "product-delete/:id", component: ProductDeleteComponent},
+  {path: "contact", component: AboutUsComponent},
+  {path: "about", component: AboutComponent},
+  {path: "search", component: SearchComponent},
+  {path: "payment", component: PaymentComponent},
+  {path: "carrinho", component: CarrinhoComponent},
+  {path: "product-by-id", component: ProductByIdComponent},
+  {path: "join-us", component: KnifeComponent}
 ];
 
 @NgModule({

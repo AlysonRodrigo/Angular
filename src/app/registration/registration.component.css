@@ -1,0 +1,55 @@
+h1{
+    color: #253F01;
+    font-size: 38pt;
+}
+.tm-logo{
+    width: 50px;
+    margin: 20px;
+}
+.myButton {
+	background-color:#F2A922;
+	border-radius:10px;
+	border:1px solid #F2A922;
+	display:inline-block;
+	color:#FFFFFF;
+	font-size:15px;
+	padding:8px 20px;
+	text-decoration:none;
+}
+.notButton{
+	background-color:#dfdfdf;
+	border-radius:10px;
+	border:1px solid #dfdfdf;
+	display:inline-block;
+	color:#909090;
+	font-size:15px;
+	padding:8px 20px;
+	text-decoration:none;
+}
+.notButton:hover {
+	background-color:#dfdfdf;
+}
+.myButton:hover {
+	background-color:#D93D04;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+button:hover{
+    background-color: #253F01;
+}
+.color-text{
+color: #696969;
+font-size: 14pt;
+}
+.myButton2 {
+	display:inline-block;
+	color:black;
+	font-size:15px;
+	padding:8px 20px;
+	text-decoration:none;
+}
+.myButton2:hover{
+	color: #D93D04
+}

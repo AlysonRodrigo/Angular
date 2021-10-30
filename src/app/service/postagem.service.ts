@@ -20,6 +20,11 @@ export class PostagemService {
   getByIdPostagem(id: number):Observable<postagemModel>{
     return this.http.get<postagemModel>(`http://localhost:8080/postagem/${id}`)
   }
+
+  getByTituloPostagem(titulo: string):Observable<postagemModel[]>{
+    return this.http.get<postagemModel[]>(`http://localhost:8080/postagem/titulo/${titulo}`)
+  }
+
   postPostagem(postagem:postagemModel):Observable<postagemModel>{
     return this.http.post<postagemModel>('http://localhost:8080/postagem',postagem)
   }

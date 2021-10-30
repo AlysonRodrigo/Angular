@@ -48,6 +48,11 @@ export class UserEditComponent implements OnInit {
 
     if (this.user.senha != this.confirmaSenha) {
       this.alertas.showAlertDanger("A senha esta incorreta")
+      console.log(environment.id)
+      console.log(environment.nome)
+      console.log(environment.foto)
+      console.log(environment.token)
+      console.log(environment.email)
     } else {
       this.authService.atualizarUser(this.user).subscribe((resp: UsuarioModel) => {
         this.user = resp
