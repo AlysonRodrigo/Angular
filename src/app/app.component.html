@@ -1,7 +1,5 @@
-<!-- <app-header *ngIf='auth.logado()'></app-header> -->
-<app-header *ngIf='auth.menuRodapeOff()'></app-header>
+<app-menu *ngIf="auth.logado()"></app-menu>
 
 <router-outlet></router-outlet>
 
-<app-footer *ngIf='auth.menuRodapeOff()'></app-footer>
-<!-- <app-footer *ngIf='auth.logado()'></app-footer> -->
+<app-rodape *ngIf="auth.logado()"></app-rodape>

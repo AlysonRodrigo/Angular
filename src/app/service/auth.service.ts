@@ -1,67 +1,33 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpClientJsonpModule } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
-import { UserLogin } from '../Model/UserLogin';
-import { UserModel } from '../Model/UserModel';
+import { Observable } from 'rxjs';
+import { login } from '../Model/login';
+import { UsuarioModel } from '../Model/UsuarioModel';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-
   constructor(
-    private http: HttpClient,
-    private router: Router
-    ) { }
-
-    token = {
-      headers: new HttpHeaders().set('Authorization', environment.token)
-    }
-
-  login(userLogin: UserLogin): Observable<UserLogin>{
-    return this.http.put<UserLogin>('https://action-forlife.herokuapp.com/user/authorize', userLogin)
+    private http: HttpClient
+  ) { }
+  entrar(userLogin: login): Observable<login> {
+    return this.http.put<login>('https://blog-pessoal-alyson.herokuapp.com/usuario/credenciais', userLogin)
   }
-
-  register(userModel: UserModel): Observable<UserModel>{
-    return this.http.post<UserModel>('https://action-forlife.herokuapp.com/user/register', userModel)
+  cadastrar(user: UsuarioModel): Observable<UsuarioModel> {
+    return this.http.post<UsuarioModel>('https://blog-pessoal-alyson.herokuapp.com/usuario/salvar', user)
   }
-
-  getAllUsers(): Observable<UserModel[]> {
-    return this.http.get<UserModel[]>('https://action-forlife.herokuapp.com/user/all', this.token)
+  getByIdUser(id_usuario: number): Observable<UsuarioModel> {
+    return this.http.get<UsuarioModel>(`https://blog-pessoal-alyson.herokuapp.com/usuario/${id_usuario}`)
   }
-
+  atualizarUser(user: UsuarioModel): Observable<UsuarioModel>{
+    return this.http.put<UsuarioModel>('https://blog-pessoal-alyson.herokuapp.com/usuario/atualizar', user)
+  }
   logado() {
     let ok: boolean = false
 
-    if(environment.token != ''){
-      ok = true
-    }
-
-    return ok
-  }  
-
-  menuRodapeOff(){
-    let ok: boolean = true
-    if(this.router.url == '/login' || this.router.url == '/registration' || this.router.url == "/cadastrar" || this.router.url.indexOf("user-edit") == 1){
-      ok = false
-    }
-    return ok
-  }
-
-  userDados(){
-    let user = {
-      name: environment.name,
-      photo: environment.photo
-    }
-    return user
-  }
-
-  typeUser(){
-    let ok: boolean = false
-
-    if(environment.type == "Administrador"){
+    if (environment.token != '') {
       ok = true
     }
 

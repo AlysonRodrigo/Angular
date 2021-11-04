@@ -1,6 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
-body {
-    background-image: linear-gradient(180deg, #ecf3d5 44%, rgb(255, 255, 255)50% );
+
+html
+{
+    scroll-behavior: smooth;
 }
 
+.fs-54{
+    font-size: 54pt;
+}
+.fs-18{
+    font-size: 18pt;
+}

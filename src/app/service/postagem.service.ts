@@ -15,23 +15,23 @@ export class PostagemService {
     headers:new HttpHeaders().set('Authorization',environment.token )
   }
   getAllPostagem():Observable<postagemModel[]>{
-    return this.http.get<postagemModel[]>('http://localhost:8080/postagem')
+    return this.http.get<postagemModel[]>('https://blog-pessoal-alyson.herokuapp.com/postagem')
   }
   getByIdPostagem(id: number):Observable<postagemModel>{
-    return this.http.get<postagemModel>(`http://localhost:8080/postagem/${id}`)
+    return this.http.get<postagemModel>(`https://blog-pessoal-alyson.herokuapp.com/postagem/${id}`)
   }
 
   getByTituloPostagem(titulo: string):Observable<postagemModel[]>{
-    return this.http.get<postagemModel[]>(`http://localhost:8080/postagem/titulo/${titulo}`)
+    return this.http.get<postagemModel[]>(`https://blog-pessoal-alyson.herokuapp.com/postagem/titulo/${titulo}`)
   }
 
   postPostagem(postagem:postagemModel):Observable<postagemModel>{
-    return this.http.post<postagemModel>('http://localhost:8080/postagem',postagem)
+    return this.http.post<postagemModel>('https://blog-pessoal-alyson.herokuapp.com/postagem',postagem)
   }
   putPostagem(postagem:postagemModel):Observable<postagemModel>{
-  return this.http.put<postagemModel>('http://localhost:8080/postagem',postagem)
+  return this.http.put<postagemModel>('https://blog-pessoal-alyson.herokuapp.com/postagem',postagem)
   }
   deletePostagem(id: number){
-    return this.http.delete(`http://localhost:8080/postagem/${id}`)
+    return this.http.delete(`https://blog-pessoal-alyson.herokuapp.com/postagem/${id}`)
   }
 }

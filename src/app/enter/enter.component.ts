@@ -32,7 +32,6 @@ environment.token = this.userLogin.token
 environment.nome = this.userLogin.nome
 environment.id = this.userLogin.id
 environment.foto = this.userLogin.foto
-environment.tipo = this.userLogin.tipo
 
 console.log(environment.token)
 console.log(environment.nome)

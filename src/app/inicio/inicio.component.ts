@@ -95,7 +95,7 @@ findByTituloPostagem(){
     this.getAllPostagem()
   }else{
     this.postagemService.getByTituloPostagem(this.tituloPost).subscribe((resp: postagemModel[])=>{
-      this.listaPostagem=resp
+      this.listaPostagem = resp
     })
   }
 }
