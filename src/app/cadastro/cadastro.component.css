@@ -1,0 +1,9 @@
+#img-bg{
+    background-image: url("../../assets/image/eccc5d16f165d92ebb71d51ec86cb21292d30d02r1-736-828v2_uhq-removebg-preview.png");
+
+    min-height: 643px;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
